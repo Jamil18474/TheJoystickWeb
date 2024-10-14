@@ -1,0 +1,22 @@
+<button [routerLink]="['/home']">Retour</button><br />
+<div class="login-box">
+  <h2>Login</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" [(ngModel)]="telephone" name="telephone" required>
+      <label>Numero de Téléphone :</label>
+    </div>
+    <div class="user-box">
+      <input type="password" [(ngModel)]="code" name="code" required>
+      <label>CODE PIN :</label>
+    </div>
+    <a (click)="logIn(telephone, code)">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Connexion
+    </a>
+    <p>{{message}}</p>
+  </form>
+</div>
